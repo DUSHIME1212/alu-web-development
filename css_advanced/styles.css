@@ -5,6 +5,11 @@ body {
     font-style: normal;
 }
 
+h1, h2, h3 ,h4, h5, p ,div{
+    system: cyclic;
+    cursor: pointer;
+}
+
 header {
     display: flex;
     flex-direction: row;
