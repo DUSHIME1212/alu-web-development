@@ -23,8 +23,8 @@ header .logo {
 }
 
 header .nav-urls {
-    flex: 4;
     font-weight: 700;
+    gap: 56px;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
