@@ -1,296 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAAt1BMVEX90AMAAAAAAAMAAAX/1AP/0gIAAAj/1wRkUgXxxgr5zQb/2Qb/2gW4mAX/3ANWRAfNqgrvyAqIcgvGogzivA7rwwnYswl8ZwmykwSPdgeukA2piwiCawo/OQ1EOQsOCAhPQA9NQw5XSgafhQ4OEAqDcQvSqw1gUwtgTgohGgkDCwjlvgooIQgnHwtqWwqZfwo0Kwo8MgcUEQU2LAoXFAWvjQorJgkbGgpKQg10ZQqPcw//5QU8MwtpRp3cAAAEfUlEQVR4nO3bbVviOBQG4CY5aWjaQktbpMCivKhgFRSVmXH3//+uTQui7ujsqHQt3ef+gpcXhDzNSRNosSwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgP2RkkiW03JZDX+aVDro9Z0yeieTfi/QbgWDUzgQgvE/VAltqyFngg8cKqHtT1HBsWCMiZNSUo/ytvlxULHYFJhesfEk0qU0r6PJmJtjWq3YMpwyZkcuyZLmHik3sBmbhlWa2+rUNkM9PXPLe4fAHFcuTsuYQB8ktWDnY1OBvbI6pXpmZs/OmSip/Y+QgRBxODdj0S5lXZXUNqHnTszZWXVKnHw28ii5MOvLsITlhZyhWRMvEnJHzK/O+Yx8PiGL4mNT5NNo31WuIjOl2TQ27zARFUots1FsKo/ii3zJHtA+e0Y0KDYCJrQl4+9ZdSrc7EaLzlByaTrILs/Uvvom3eAq36BcJvLZ+1SMmYE8X2AGej/DTfpImAbZMKxOYb9CykU+2tzu7mFUSPXsorVGWZufvaGlKDbNw+CTuSUFwyKzWFZ6oDdUvnU0fRWzjvfx3NLrjAXPq9sOKrQfexuFM74ZpFbwwdM5yWBUTGgmZtWe0k8k9TZdNpsWX7+70KXS/nBz3Jjdq+qXKK9QyTnbdJsft2P1jp5LUp12vg4UL58lB1Hdj6SKrtmWuJ5k8neSS7Mcx8u1eHzhdVTJ5flXyOrb2zo3wW/SwFK/TE6krKB9w3fHSkz2tOj/t0gvbbbD7XEaxZariHbfPch8fKXJ6+o4Skdid5RM6KU+qOJ+IlXY//YUJD+rz08GfT9IQl1806S1DrMzv390MhcvnvdtEh5o5gKRP34RaBuLr67W6/XVij9O4mfPsUd+Zb/+/l2k4odr8VPut/B1as75X93pPZDK6qRXr4z4T8Q8P+kd+DA/keRm3UUx5G+F55eLbubu9aN5BZjth5VEy9ntHf9HcH53O1v6ifWezcwhyRcppbNO0J2k7dPBoJ0u74NO5piVvKaJd+RmiS7ka3dpVw4AAAAAAAAAAAAAAOCL1e3S1r/TjrRE+38WWzVsy2GNQ74t4QPIT2XNU9P2Sm3xSKq4OO9629TS/KOOhU73jYdQWlIvF4NE9RZHgbKoO9ikJj1pLO6t2l3cVG3G+dqi5JsQTHznnIuJck9snaeWsc2ELba3vteIns7DHyJRP/hD4jM2zjp3PPNaIk/tWrd8GSYpH9WuyFerjpNJzz72pNfgMbl97jdbxVh7ET+PO514KOKaDTZNGBdd8uy5Z6kjkUnq7lI3+6b685pnQc1SW83gYSWcpj13TWr+MnVXtJZprpRfb38hOkn/TPnZq6ldR9zFzabz2d9MVA/diDETjidWRer4eWpFPSFaLWGHX93LfaPshk0j6a7/MqlT4VgyYoG3sC3LPiVLRTeCX/t1G+p896WLXcjmZuH8Hukwv5l687f54KW1rN269Rr54qF+GzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgFL8DW+UPCL2EqRgAAAAAElFTkSuQmCC" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAADOCAMAAADR0rQ5AAAAt1BMVEX90AMAAAAAAAMAAAX/1AP/0gIAAAj/1wRkUgXxxgr5zQb/2Qb/2gW4mAX/3ANWRAfNqgrvyAqIcgvGogzivA7rwwnYswl8ZwmykwSPdgeukA2piwiCawo/OQ1EOQsOCAhPQA9NQw5XSgafhQ4OEAqDcQvSqw1gUwtgTgohGgkDCwjlvgooIQgnHwtqWwqZfwo0Kwo8MgcUEQU2LAoXFAWvjQorJgkbGgpKQg10ZQqPcw//5QU8MwtpRp3cAAAEfUlEQVR4nO3bbVviOBQG4CY5aWjaQktbpMCivKhgFRSVmXH3//+uTQui7ujsqHQt3ef+gpcXhDzNSRNosSwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgP2RkkiW03JZDX+aVDro9Z0yeieTfi/QbgWDUzgQgvE/VAltqyFngg8cKqHtT1HBsWCMiZNSUo/ytvlxULHYFJhesfEk0qU0r6PJmJtjWq3YMpwyZkcuyZLmHik3sBmbhlWa2+rUNkM9PXPLe4fAHFcuTsuYQB8ktWDnY1OBvbI6pXpmZs/OmSip/Y+QgRBxODdj0S5lXZXUNqHnTszZWXVKnHw28ii5MOvLsITlhZyhWRMvEnJHzK/O+Yx8PiGL4mNT5NNo31WuIjOl2TQ27zARFUots1FsKo/ii3zJHtA+e0Y0KDYCJrQl4+9ZdSrc7EaLzlByaTrILs/Uvvom3eAq36BcJvLZ+1SMmYE8X2AGej/DTfpImAbZMKxOYb9CykU+2tzu7mFUSPXsorVGWZufvaGlKDbNw+CTuSUFwyKzWFZ6oDdUvnU0fRWzjvfx3NLrjAXPq9sOKrQfexuFM74ZpFbwwdM5yWBUTGgmZtWe0k8k9TZdNpsWX7+70KXS/nBz3Jjdq+qXKK9QyTnbdJsft2P1jp5LUp12vg4UL58lB1Hdj6SKrtmWuJ5k8neSS7Mcx8u1eHzhdVTJ5flXyOrb2zo3wW/SwFK/TE6krKB9w3fHSkz2tOj/t0gvbbbD7XEaxZariHbfPch8fKXJ6+o4Skdid5RM6KU+qOJ+IlXY//YUJD+rz08GfT9IQl1806S1DrMzv390MhcvnvdtEh5o5gKRP34RaBuLr67W6/XVij9O4mfPsUd+Zb/+/l2k4odr8VPut/B1as75X93pPZDK6qRXr4z4T8Q8P+kd+DA/keRm3UUx5G+F55eLbubu9aN5BZjth5VEy9ntHf9HcH53O1v6ifWezcwhyRcppbNO0J2k7dPBoJ0u74NO5piVvKaJd+RmiS7ka3dpVw4AAAAAAAAAAAAAAOCL1e3S1r/TjrRE+38WWzVsy2GNQ74t4QPIT2XNU9P2Sm3xSKq4OO9629TS/KOOhU73jYdQWlIvF4NE9RZHgbKoO9ikJj1pLO6t2l3cVG3G+dqi5JsQTHznnIuJck9snaeWsc2ELba3vteIns7DHyJRP/hD4jM2zjp3PPNaIk/tWrd8GSYpH9WuyFerjpNJzz72pNfgMbl97jdbxVh7ET+PO514KOKaDTZNGBdd8uy5Z6kjkUnq7lI3+6b685pnQc1SW83gYSWcpj13TWr+MnVXtJZprpRfb38hOkn/TPnZq6ldR9zFzabz2d9MVA/diDETjidWRer4eWpFPSFaLWGHX93LfaPshk0j6a7/MqlT4VgyYoG3sC3LPiVLRTeCX/t1G+p896WLXcjmZuH8Hukwv5l687f54KW1rN269Rr54qF+GzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgFL8DW+UPCL2EqRgAAAAAElFTkSuQmCC"
+      type="image/x-icon"
+    />
     <title>@Smile school</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <a>
-                <img src="imgs/logo.png" alt="logo" />
-            </a>
-        </div>
-        <div class="nav-urls">
-            <a href="">COURSES</a>
-            <a href="">PRICING</a>
-            <a href="">LOGIN</a>
-        </div>
+      <div>
+        <a href="index.html">
+          <img src="./imgs/logo.png" class="logo" alt="smile logo" />
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="courses.html">COURSES</a>
+        <a href="pricing.html">PRICING</a>
+        <a href="login.html">LOGIN</a>
+      </div>
     </header>
     <main>
-        <section class="header-section">
-            <div class="schooled">
-                <h1 class="schooled-title">
-                    Get Schooled
-                </h1>
-                <p class="schooled-text">
-                    <span>SMILES</span>
-                    <span>GRIN</span>
-                    <span>LAUGH</span>
-                </p>
-                <button class="register-btn">REGISTER FOR FREE</button>
+      <!-- banner section -->
+      <section class="banner">
+        <div class="banner__learn">
+          <h1>Get schooled</h1>
+          <p>SMILES GRIN LAUGH</p>
+          <button>REGISTER FOR FREE</button>
+        </div>
+        <div class="banner__courses">
+          <h2><span class="dcolor">Learn</span> from the pros</h2>
+          <div class="banner__courses__cards__container">
+            <div class="banner__courses__card">
+              <img src="./imgs/philip.png" alt="profile" />
+              <h3>Phillip Massey</h3>
+              <p>« Smile of the year » 2018 - 2019</p>
             </div>
-            <div class="pros">
-                <h2 class="pros-title">
-                    <span class="secondary-color">Learn</span> from the pros
-                </h2>
-                <div class="pros-block">
-                    <div class="pros-card">
-                        <img src="imgs/philip.png" alt="philip">
-                        <h3>Phillip Massey</h3>
-                        <p>« Smile of the year » 2018 - 2019</p>
-                    </div>
-                    <div class="pros-card">
-                        <img src="imgs/nannie.png" alt="nannie">
-                        <h3>Nannie Lawrence</h3>
-                        <p>Best « little smile » 2017</p>
-                    </div>
-                    <div class="pros-card">
-                        <img src="imgs/bruce.png" alt="bruce">
-                        <h3>Bruce Walters</h3>
-                        <p>Best « Friend Smile » live performance 2019</p>
-                    </div>
-                    <div class="pros-card">
-                        <img src="imgs/henry.png" alt="henry">
-                        <h3>Henry Hughes</h3>
-                        <p>« 24h smiles » winner 2016 - 2019</p>
-                    </div>
-                </div>
+            <div class="banner__courses__card">
+              <img src="./imgs/nannie.png" alt="profile" />
+              <h3>Nannie Lawrence</h3>
+              <p>Best « little smile » 2017</p>
             </div>
-        </section>
-        <section class="presenter-section">
-            <div class="presenter-block">
-                <img src="imgs/avatar.png" alt="avatar">
-                <div>
-                    <blockquote>
-                        « Those tutorials are concise and go straight to the point. I can’t think of a better
-                        place to learn smiling. And it’s so fun!
-                    </blockquote>
-                    <p class="person-name">Person Name</p>
-                    <p class="weather">weather presenter</p>
-                </div>
+            <div class="banner__courses__card">
+              <img src="./imgs/bruce.png" alt="profile" />
+              <h3>Bruce Walters</h3>
+              <p>Best « Friend Smile » live performance 2019</p>
             </div>
-        </section>
-        <section class="videos-section">
-            <h1>
-                Most <span class="secondary-color">popular</span> tutorials
-            </h1>
-            <div class="videos-list">
-                <div class="video-card">
-                    <img src="imgs/preview_diag.png" alt="">
-                    <span class="cirl"><i class="ph-fill ph-play"></i></span>
-                    <a class="play" href="#">
-                        <img src="imgs/play.png" alt="">
-                    </a>
-                    <h2 class="video-title">
-                        Diagonal Smile
-                    </h2>
-                    <p class="video-desc">
-                        Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
-                    </p>
-                    <div class="author">
-                        <img class="author-img" src="imgs/philip_sm.png" alt="philip_sm">
-                        <h3 class="author-name">Phillip Massey</h3>
-                    </div>
-                    <div class="rating-duration">
-                        <div class="rating">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_5.svg" alt="Star_5">
-                        </div>
-                        <p class="duration">8 min</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="imgs/preview_sad.png" alt="">
-                    <span class="cirl"><i class="ph-fill ph-play"></i></span>
-                    <a class="play" href="#">
-                        <img src="imgs/play.png" alt="">
-                    </a>
-                    <h2 class="video-title">
-                        Sad Smile
-                    </h2>
-                    <p class="video-desc">
-                        Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
-                    </p>
-                    <div class="author">
-                        <img class="author-img" src="imgs/philip_sm.png" alt="philip_sm">
-                        <h3 class="author-name">Phillip Massey</h3>
-                    </div>
-                    <div class="rating-duration">
-                        <div class="rating">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_5.svg" alt="Star_5">
-                        </div>
-                        <p class="duration">8 min</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="imgs/preview_nat.png" alt="">
-                    <span class="cirl"><i class="ph-fill ph-play"></i></span>
-                    <a class="play" href="#">
-                        <img src="imgs/play.png" alt="">
-                    </a>
-                    <h2 class="video-title">
-                        Natural Smile
-                    </h2>
-                    <p class="video-desc">
-                        Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
-                    </p>
-                    <div class="author">
-                        <img class="author-img" src="imgs/philip_sm.png" alt="philip_sm">
-                        <h3 class="author-name">Phillip Massey</h3>
-                    </div>
-                    <div class="rating-duration">
-                        <div class="rating">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_5.svg" alt="Star_5">
-                        </div>
-                        <p class="duration">8 min</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <img src="imgs/preview_hap.png" alt="">
-                    <span class="cirl"><i class="ph-fill ph-play"></i></span>
-                    <a class="play" href="#">
-                        <img src="imgs/play.png" alt="">
-                    </a>
-                    <h2 class="video-title">
-                        Happy Smile
-                    </h2>
-                    <p class="video-desc">
-                        Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
-                    </p>
-                    <div class="author">
-                        <img class="author-img" src="imgs/philip_sm.png" alt="philip_sm">
-                        <h3 class="author-name">Phillip Massey</h3>
-                    </div>
-                    <div class="rating-duration">
-                        <div class="rating">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_1.svg" alt="Star_1">
-                            <img src="svgs/Star_5.svg" alt="Star_5">
-                        </div>
-                        <p class="duration">8 min</p>
-                    </div>
-                </div>
+            <div class="banner__courses__card">
+              <img src="./imgs/henry.png" alt="profile" />
+              <h3>Henry Hughes</h3>
+              <p>« 24h smiles » winner 2016 - 2019</p>
             </div>
-        </section>
-        <section class="membership-section">
-            <h1>
-                <span class="secondary-color">Free</span> membership
-            </h1>
-            <div class="memberships">
-                <div class="membership-card">
-                    <img src="svgs/smile.svg" alt="smile">
-                    <h2>Lorem ipsum</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-                <div class="membership-card">
-                    <img src="svgs/smile.svg" alt="smile">
-                    <h2>Lorem ipsum</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-                <div class="membership-card">
-                    <img src="svgs/smile.svg" alt="smile">
-                    <h2>Lorem ipsum</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-                <div class="membership-card">
-                    <img src="svgs/smile.svg" alt="smile">
-                    <h2>Lorem ipsum</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
+          </div>
+        </div>
+      </section>
+      <!-- quote section -->
+      <section class="quotes">
+        <div class="quotes__inner">
+          <img src="./imgs/avatar.png" alt="avatar" />
+          <div>
+            <blockquote>
+              « Those tutorials are concise and go straight to the point. I
+              can't think of a better place to learn smiling. And it's so fun!
+            </blockquote>
+            <p class="names">Person Name</p>
+            <p class="presenter">weather presenter</p>
+          </div>
+        </div>
+      </section>
+      <!-- videos section -->
+      <section class="videos">
+        <h1>Most <span class="dcolor">popular</span> tutorials</h1>
+        <div class="videos__inner">
+          <div>
+            <div class="preview">
+              <img
+                src="./imgs/preview_diag.png"
+                alt="Preview"
+                class="preview__image"
+              />
+              <img src="./imgs/play.svg" alt="play" class="play__button" />
             </div>
-            <button class="register-btn">REGISTER FOR FREE</button>
-        </section>
-        <section class="faq-section">
-            <h1>F.A.Q.</h1>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h2>How does this work?</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <h2>How does this work?</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
+            <h2>Diagonal Smile</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+              eiusmod.
+            </p>
+            <div class="profile">
+              <img src="./imgs/philip_sm.png" alt="profile" />
+              <h3>Phillip Massey</h3>
             </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h2>How does this work?</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <h2>How does this work?</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
+            <div class="ratings">
+              <!-- star ratings -->
+              <div>
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_5.svg
+                " alt="Star" />
+              </div>
+              <p>8 min</p>
             </div>
-        </section>
+          </div>
+
+          <div>
+            <div class="preview">
+              <img
+                src="./imgs/preview_sad.png"
+                alt="Preview"
+                class="preview__image"
+              />
+              <img src="./imgs/play.svg" alt="play" class="play__button" />
+            </div>
+            <h2>Sad Smile</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+              eiusmod.
+            </p>
+            <div class="profile">
+              <img src="./imgs/philip_sm.png" alt="profile" />
+              <h3>Phillip Massey</h3>
+            </div>
+            <div class="ratings">
+              <!-- star ratings -->
+              <div>
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_5.svg
+                " alt="Star" />
+              </div>
+              <p>8 min</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="preview">
+              <img
+                src="./imgs/preview_nat.png"
+                alt="Preview"
+                class="preview__image"
+              />
+              <img src="./imgs/play.svg" alt="play" class="play__button" />
+            </div>
+            <h2>Natural Smile</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+              eiusmod.
+            </p>
+            <div class="profile">
+              <img src="./imgs/philip_sm.png" alt="profile" />
+              <h3>Phillip Massey</h3>
+            </div>
+            <div class="ratings">
+              <!-- star ratings -->
+              <div>
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_5.svg
+                " alt="Star" />
+                <img src="./svgs/Star_5.svg
+                " alt="Star" />
+              </div>
+              <p>8 min</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="preview">
+              <img
+                src="./imgs/preview_hap.png"
+                alt="Preview"
+                class="preview__image"
+              />
+              <img src="./imgs/play.svg" alt="play" class="play__button" />
+            </div>
+            <h2>Happy Smile</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consect adipiscing elit, sed do
+              eiusmod.
+            </p>
+            <div class="profile">
+              <img src="./imgs/philip_sm.png" alt="profile" />
+              <h3>Phillip Massey</h3>
+            </div>
+            <div class="ratings">
+              <!-- star ratings -->
+              <div>
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_1.svg
+                " alt="Star" />
+                <img src="./svgs/Star_5.svg
+                " alt="Star" />
+              </div>
+              <p>8 min</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- membership section -->
+      <section class="membership">
+        <h1><span class="active">Free</span> membership</h1>
+        <div class="row">
+          <div>
+            <img src="./svgs/smile.svg" alt="teacher1" />
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div>
+            <img src="./svgs/smile.svg" alt="smile" />
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div>
+            <img src="./svgs/smile.svg" alt="smile" />
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div>
+            <img src="./svgs/smile.svg" alt="smile" />
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <button>REGISTER FOR FREE</button>
+      </section>
+      <!-- FAQ section -->
+      <section class="faq">
+        <h1>F.A.Q.</h1>
+        <div class="faq__inner">
+          <div>
+            <div>
+              <h2>How does this work?</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div>
+              <h2>How does this work?</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>How does this work?</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div>
+              <h2>How does this work?</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="ft-container">
-            <div class="nav-ft">
-                <img src="imgs/logo.png" alt="">
-                <div>
-                    <a href=""><img src="svgs/facebook.svg" alt=""></a>
-                    <a href=""><img src="svgs/twitter.svg" alt=""></a>
-                    <a href=""><img src="svgs/Combined Shape.svg" alt=""></a>
-                </div>
-            </div>
-            <p>©smileschool 2020</p>
+      <div class="footer__inner">
+        <div>
+          <img src="./imgs/logo.png" alt="logo" />
+          <div>
+            <!-- social image links -->
+            <a href="#"><img src="./svgs/facebook.svg" width="32" alt="Facebook" /></a>
+            <a href="#"><img src="./svgs/twitter.svg" width="32" alt="Twitter" /></a>
+            <a href="#"><img src="./svgs/Instagram.svg" width="32" alt="Instagram" /></a>
+          </div>
         </div>
+        <p>©smileschool 2020</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
