@@ -28,6 +28,10 @@ body {
     font-weight: 700;
     font-size: 12px;
   }
+
+  img{
+    user-select: none;
+  }
   
   .nav-links > a {
     font-weight: 700;
